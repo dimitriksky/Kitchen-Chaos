@@ -100,8 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe7124c377c324efbbaafe67942d8134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tomatoPrefab: {fileID: 3870248088478577201, guid: e31bd4307f4584db5aea774f37d254dd,
-    type: 3}
+  kitchenObjectSO: {fileID: 11400000, guid: 187128bb253ff452794f6b667761b32f, type: 2}
   counterTopPoint: {fileID: 4148077185316330744}
 --- !u!1001 &1538021369963200372
 PrefabInstance:
@@ -114,17 +113,22 @@ PrefabInstance:
     - target: {fileID: 3122943793780361775, guid: 0004cb1e11ad014419b943c7da960724,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.6500001
       objectReference: {fileID: 0}
     - target: {fileID: 3122943793780361775, guid: 0004cb1e11ad014419b943c7da960724,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3122943793780361775, guid: 0004cb1e11ad014419b943c7da960724,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 1.6500001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122943793780361775, guid: 0004cb1e11ad014419b943c7da960724,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3984833892277163771, guid: 0004cb1e11ad014419b943c7da960724,
         type: 3}
