@@ -7,10 +7,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-
     public static Player Instance { get; private set; }
-    public event EventHandler<OnSelectdCounterChangedEventArgs> OnSelectdCounterChanged;
-    public class OnSelectdCounterChangedEventArgs : EventArgs {
+    public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterChanged;
+    public class OnSelectedCounterChangedEventArgs : EventArgs {
         public ClearCounter selectedCounter;
     }
 
@@ -50,7 +49,7 @@ public class Player : MonoBehaviour
 
     private void HandleInteractions() {
         Vector2 inputVector = gameInput.GetMovementVectorNormalized();
-        Vector3 moveDir = new Vector3(inputVector.x, 0, inputVector.y);
+        Vector3 moveDir = new(inputVector.x, 0, inputVector.y);
 
         if (moveDir != Vector3.zero) {
             lastInteractDirection = moveDir;
@@ -84,7 +83,7 @@ public class Player : MonoBehaviour
 
 
         bool canMove = false;
-        Vector3 moveDir = new Vector3(inputVector.x, 0, inputVector.y);
+        Vector3 moveDir = new(inputVector.x, 0, inputVector.y);
         Vector3 moveDirX = new Vector3(moveDir.x, 0, 0).normalized;
         Vector3 moveDirZ = new Vector3(0, 0, moveDir.z).normalized;
 
@@ -115,7 +114,7 @@ public class Player : MonoBehaviour
 
     private void SetSelectedCounter(ClearCounter selectedCounter) {
         this.selectedCounter = selectedCounter;
-        OnSelectdCounterChanged.Invoke(this, new OnSelectdCounterChangedEventArgs {
+        OnSelectedCounterChanged.Invoke(this, new OnSelectedCounterChangedEventArgs {
                         selectedCounter = selectedCounter
                         });
     }
